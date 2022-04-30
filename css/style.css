@@ -1,0 +1,105 @@
+:root {
+    --colormainBlue: #5863F8;
+    --bgColor01: yellow;
+    --size01: 30px;
+}
+.text::before {
+    content: 'Academy';
+    font-size: 25px;
+    color: var( --colormainBlue);
+    background-color: var(--bgColor01);
+}
+/* .text::after {
+    content: ' ';
+    width: 2px;
+    height: 30px;
+    background-color: blue;
+    display:block;
+    margin-left: 15px;
+} */
+/* .text::after {
+    content: '\2614';
+} */
+.text::after {
+    content: url(../images/smiley.gif);
+}
+
+.nav-ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: var(--size01);
+}
+.nav-ul li {
+    margin-right: 15px;
+}
+.header-wraper {
+    margin-bottom: 30px;
+    background-image: url(../images/mohamed-ajufaan-GFcWwwGNu_w-unsplash.jpg);
+    width: 100%;
+    height: 324px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.header-wraper::after {
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: block;
+    opacity: 60%;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.nav-a::after {
+    content: ' ';
+    width: 0%;
+    height: 1px;
+    background-color: red;
+    position: absolute;
+    bottom:0;
+    right:0;
+    -webkit-transition: all .4s linear;
+    -o-transition: all .4s linear;
+    transition: all .4s linear;
+}
+.nav-a {
+    position: relative;
+    z-index: 10;
+    color:#fff;
+}
+.nav-a:hover::after {
+    width: 60%;
+}
+
+.block {
+    height: var(--size01);
+}
+
+/* grid */
+.block-grid-container {
+    background-color: yellow;
+    height: 100px;
+}
+.grid-wraper {
+    display: grid;
+    grid-template-columns: repeat(3,250px);
+    column-gap: 50px;
+    row-gap: 30px;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .grid-wraper {
+        grid-template-columns: repeat(2, 500px);
+    }
+}
+
+
+@media (max-width: 480px) {
+    .grid-wraper {
+        grid-template-columns: repeat(3, 150px);
+    }
+}
